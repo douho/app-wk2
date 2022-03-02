@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import albumData from "../json/albums";
 
 const Albumlist = () => {
   return (
@@ -9,72 +10,112 @@ const Albumlist = () => {
           <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: "https://i.imgur.com/K3KJ3w4h.jpg"
+              uri: albumData[0].thumbnail_image
             }}
           />
           <View style={styles.headerContentStyle}>
-            <Text>Taylor Swift</Text>
-            <Text>Taylor Swift</Text>
+          <View><Text>{albumData[0].title}</Text></View>
+            <View><Text>{albumData[0].artist}</Text></View>  
           </View>
         </View>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
             source={{
-              uri:
-                "https://images-na.ssl-images-amazon.com/images/I/61McsadO1OL.jpg"
+              uri: albumData[0].image
             }}
           />
         </View>
       </View>
-
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
           <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: "https://i.imgur.com/K3KJ3w4h.jpg"
+              uri: albumData[1].thumbnail_image
             }}
           />
           <View style={styles.headerContentStyle}>
-            <Text>Taylor Swift</Text>
-            <Text>Taylor Swift</Text>
+          <View><Text>{albumData[1].title}</Text></View>
+            <View><Text>{albumData[1].artist}</Text></View> 
           </View>
         </View>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
             source={{
-              uri:
-                "https://images-na.ssl-images-amazon.com/images/I/61McsadO1OL.jpg"
+              uri: albumData[1].image
             }}
           />
         </View>
       </View>
-
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
           <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: "https://i.imgur.com/K3KJ3w4h.jpg"
+              uri: albumData[2].thumbnail_image
             }}
           />
           <View style={styles.headerContentStyle}>
-            <Text>Taylor Swift</Text>
-            <Text>Taylor Swift</Text>
+          <View><Text>{albumData[2].title}</Text></View>
+            <View><Text>{albumData[2].artist}</Text></View>   
           </View>
         </View>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
             source={{
-              uri:
-                "https://images-na.ssl-images-amazon.com/images/I/61McsadO1OL.jpg"
+              uri: albumData[2].image
             }}
           />
         </View>
       </View>
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: albumData[3].thumbnail_image
+            }}
+          />
+          <View style={styles.headerContentStyle}>
+          <View><Text>{albumData[3].title}</Text></View>
+            <View><Text>{albumData[3].artist}</Text></View>    
+          </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+          <Image
+            style={styles.imageStyle}
+            source={{
+              uri: albumData[3].image
+            }}
+          />
+        </View>
+      </View>
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: albumData[4].thumbnail_image
+            }}
+          />
+          <View style={styles.headerContentStyle}>
+            <View><Text>{albumData[4].title}</Text></View>
+            <View><Text>{albumData[4].artist}</Text></View>          
+          </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+          <Image
+            style={styles.imageStyle}
+            source={{
+              uri: albumData[4].image
+            }}
+          />
+        </View>
+      </View>
+
     </ScrollView>
   );
 };
@@ -90,8 +131,11 @@ const styles = StyleSheet.create({
     margin: 5
   },
   headerContentStyle: {
-    flexDirection: "column",
-    justifyContent: "space-around",
+    width: 260,
+    height:50,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingLeft: 10
   },
   cardContainerStyle: {
