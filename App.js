@@ -1,16 +1,27 @@
 import React from "react";
-import { StatusBar, SafeAreaView } from "react-native";
-import Header from "./src/components/Header";
-import AlbumList from "./src/components/AlbumList";
+import { StyleSheet, StatusBar, SafeAreaView, Text } from "react-native";
+import albumData from "./src/json/albums.json";
 
 const App = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={styles.containerStyle}>
       <StatusBar />
-      <Header />
-      <AlbumList />
+      <Text>{albumData[0].title}</Text>
+      <Text>{albumData[0].artist}</Text>
+      <Text>{albumData[1].title}</Text>
+      <Text>{albumData[1].artist}</Text>
+      <Text>{albumData[2].title}</Text>
+      <Text>{albumData[2].artist}</Text>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  containerStyle: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  }
+});
 
 export default App;

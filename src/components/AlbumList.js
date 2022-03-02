@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 
 const Albumlist = () => {
   return (
-    <>
+    <ScrollView>
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
           <Image
@@ -27,7 +27,55 @@ const Albumlist = () => {
           />
         </View>
       </View>
-    </>
+
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: "https://i.imgur.com/K3KJ3w4h.jpg"
+            }}
+          />
+          <View style={styles.headerContentStyle}>
+            <Text>Taylor Swift</Text>
+            <Text>Taylor Swift</Text>
+          </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+          <Image
+            style={styles.imageStyle}
+            source={{
+              uri:
+                "https://images-na.ssl-images-amazon.com/images/I/61McsadO1OL.jpg"
+            }}
+          />
+        </View>
+      </View>
+
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: "https://i.imgur.com/K3KJ3w4h.jpg"
+            }}
+          />
+          <View style={styles.headerContentStyle}>
+            <Text>Taylor Swift</Text>
+            <Text>Taylor Swift</Text>
+          </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+          <Image
+            style={styles.imageStyle}
+            source={{
+              uri:
+                "https://images-na.ssl-images-amazon.com/images/I/61McsadO1OL.jpg"
+            }}
+          />
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
